@@ -1,0 +1,12 @@
+/.metadata/
+**/generated/*
+**/obj/*
+**/Release/*
+**/Debug/*
+*.appimage
+*.appimage.hs_fs
+*appimage_xip
+*.map
+*.out
+*.rprc_xip
+*.rprc
