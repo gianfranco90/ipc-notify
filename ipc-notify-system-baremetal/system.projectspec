@@ -4,8 +4,9 @@
 	<import spec="../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/example.projectspec"/>
     <import spec="../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/example.projectspec"/>
 	<import spec="../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/example.projectspec"/>
+	<import spec="../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/example.projectspec"/>
     <project
-        name="ipc_notify_benchmark_system_four_r5f_baremetal"
+        name="ipc_notify_benchmark_system_baremetal"
         products="com.ti.MCU_PLUS_SDK_AM64X"
         configurations="
             Debug,

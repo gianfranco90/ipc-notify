@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+                
+    
+    
+    
+    <configuration XML_version="1.2" id="Texas Instruments XDS110 USB Debug Probe_0">
+                                
+        
+        
+        <instance XML_version="1.2" desc="Texas Instruments XDS110 USB Debug Probe_0" href="connections/TIXDS110_Connection.xml" id="Texas Instruments XDS110 USB Debug Probe_0" xml="TIXDS110_Connection.xml" xmlpath="connections"/>
+                                
+        
+        
+        <connection XML_version="1.2" id="Texas Instruments XDS110 USB Debug Probe_0">
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510cs_dap.xml" id="drivers" xml="tixds510cs_dap.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510cortexA53.xml" id="drivers" xml="tixds510cortexA53.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510cortexR.xml" id="drivers" xml="tixds510cortexR.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510cortexM.xml" id="drivers" xml="tixds510cortexM.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510pru.xml" id="drivers" xml="tixds510pru.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510csstm.xml" id="drivers" xml="tixds510csstm.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510ctset2.xml" id="drivers" xml="tixds510ctset2.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <instance XML_version="1.2" href="drivers/tixds510etbcs.xml" id="drivers" xml="tixds510etbcs.xml" xmlpath="drivers"/>
+                                                
+            
+            
+            <platform XML_version="1.2" id="platform_0">
+                                                                
+                
+                
+                <instance XML_version="1.2" desc="AM64x_GP_EVM_0" href="boards/AM64x_GP_EVM.xml" id="AM64x_GP_EVM_0" xml="AM64x_GP_EVM.xml" xmlpath="boards"/>
+                                                                
+                
+                
+                <board XML_version="1.2" description="AM64x General Purpose Evaluation Module" id="AM64x_GP_EVM_0">
+                                                                                
+                    
+                    
+                    <device HW_revision="1.0" XML_version="1.2" description="AM64x - Cortex A53 Sitara(tm) Embedded Processor" id="AM64x_0" partnum="AM64x" simulation="no">
+                                                                                                
+                        
+                        
+                        <router HW_revision="1.0" XML_version="1.2" description="CS_DAP Router" id="CS_DAP_0" isa="CS_DAP">
+                                                                                                                
+                            
+                            
+                            <subpath id="ComputeCluster_A53_0">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="CortexA53_0" deviceSim="false" id="CortexA53_0" isa="CortexA53">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="ComputeCluster_A53_1">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="CortexA53_1" deviceSim="false" id="CortexA53_1" isa="CortexA53">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="MAIN_PULSAR_0_0">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="MAIN_PULSAR_Cortex_R5_0_0" deviceSim="false" id="MAIN_PULSAR_Cortex_R5_0_0" isa="Cortex_R5">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="filepathfield" Value="..\..\emulation\gel\AM64x\CPU_reset.gel" id="GEL File"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="DMSC">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="Cortex_M3 CPU" deviceSim="false" id="Cortex_M3_0" isa="Cortex_M3">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="ICSS_G0">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="PRU Accelerator" deviceSim="false" id="ICSS_G0_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="RTU for ICSS_G0_PRU_0" deviceSim="false" id="ICSS_G0_RTU_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="TX_PRU_0 Accelerator" deviceSim="false" id="ICSS_G0_TX_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="PRU Accelerator" deviceSim="false" id="ICSS_G0_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="RTU for ICSS_G0_PRU_1" deviceSim="false" id="ICSS_G0_RTU_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="TX_PRU_1 Accelerator" deviceSim="false" id="ICSS_G0_TX_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="ICSS_G1">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="PRU Accelerator" deviceSim="false" id="ICSS_G1_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="RTU for ICSS_G1_PRU_0" deviceSim="false" id="ICSS_G1_RTU_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="TX_PRU_0 Accelerator" deviceSim="false" id="ICSS_G1_TX_PRU_0" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="PRU Accelerator" deviceSim="false" id="ICSS_G1_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="RTU for ICSS_G1_PRU_1" deviceSim="false" id="ICSS_G1_RTU_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="TX_PRU_1 Accelerator" deviceSim="false" id="ICSS_G1_TX_PRU_1" isa="TMS192C2026">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="1" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                                
+                            
+                            
+                            <subpath id="BLAZAR_CM4F">
+                                                                                                                                
+                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="Cortex_M4F CPU" deviceSim="false" id="Cortex_M4F_0" isa="Cortex_M4F">
+                                                                                                                                                
+                                    
+                                    
+                                    <property Type="choicelist" Value="0" id="bypass"/>
+                                                                                                                                            
+                                
+                                
+                                </cpu>
+                                                                                                                            
+                            
+                            
+                            </subpath>
+                                                                                                            
+                            
+                            
+                            <subpath id="MAIN_PULSAR_0_1">
+                                                                                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="Cortex_R5 CPU 1" deviceSim="false" id="MAIN_PULSAR_Cortex_R5_0_1" isa="Cortex_R5">
+                                                                                                            
+                                    
+                                    <property Type="choicelist" Value="0" id="bypass"/>
+                                                                                                        
+                                
+                                </cpu>
+                                                                                            
+                            
+                            </subpath>
+                                                                                    
+                            
+                            <subpath id="MAIN_PULSAR_1_1">
+                                                                                                
+                                
+                                <cpu HW_revision="1.0" XML_version="1.2" description="Cortex_R5 CPU 1" deviceSim="false" id="MAIN_PULSAR_Cortex_R5_1_1" isa="Cortex_R5">
+                                                                                                            
+                                    
+                                    <property Type="choicelist" Value="0" id="bypass"/>
+                                                                                                        
+                                
+                                </cpu>
+                                                                                            
+                            
+                            </subpath>
+                                                                                
+                        
+                        </router>
+                                                                                            
+                    
+                    
+                    </device>
+                                                                            
+                
+                
+                </board>
+                                                            
+            
+            
+            </platform>
+                                            
+        
+        
+        </connection>
+                            
+    
+    
+    </configuration>
+            
+
+
+</configurations>

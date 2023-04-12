@@ -25,7 +25,7 @@ uint32_t gGpioPinNum;
 uint32_t gGpioDirection;
 
 /* number of iterations of message exchange to do */
-uint32_t gMsgsCount = 1u;
+uint32_t gMsgsCount = 100u;
 /* client ID that is used to send and receive messages */
 uint32_t gClientId = 4u;
 
@@ -40,6 +40,7 @@ uint32_t gRemoteCoreId[] = {
     CSL_CORE_ID_R5FSS0_1,
     CSL_CORE_ID_R5FSS1_0,
     CSL_CORE_ID_R5FSS1_1,
+	CSL_CORE_ID_M4FSS0_0,
     CSL_CORE_ID_MAX /* this value indicates the end of the array */
 };
 
@@ -123,6 +124,7 @@ void ipc_notify_benchmark_main_core_start(void)
     for(i=0; gRemoteCoreId[i]!=CSL_CORE_ID_MAX; i++)
     {
         CycleCounterP_reset();
+		cpuCyclesAcc_t3_t0 = 0;
         for(j=0; j < gMsgsCount; j++)
         {
             uint32_t msgValue = 0;
@@ -137,8 +139,7 @@ void ipc_notify_benchmark_main_core_start(void)
             SemaphoreP_pend(&gReplyReceivedSem, SystemP_WAIT_FOREVER);
 			t3_cpuCycles = CycleCounterP_getCount32();
 			//gpio_pulse(gGpioBaseAddrTranslated, gGpioPinNum, gPulseWidth);
-
-
+			
             cpuCycles_t3_t0 = getCpuCycles(t0_cpuCycles, t3_cpuCycles);
             cpuCyclesAcc_t3_t0 += cpuCycles_t3_t0;
 

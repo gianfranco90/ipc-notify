@@ -30,10 +30,10 @@ gpio1.$name                    = "GPIO0_R5FSS0_0";
 gpio1.MCU_GPIO.$assign         = "MCU_GPIO0";
 gpio1.MCU_GPIO.gpioPin.$assign = "MCU_SPI1_CS1";
 
-ipc.m4fss0_0 = "NONE";
 ipc.r5fss1_0 = "notify";
 ipc.r5fss0_1 = "notify";
 ipc.r5fss1_1 = "notify";
+ipc.m4fss0_0 = "notify";
 
 debug_log.enableUartLog = true;
 debug_log.uartLog.$name = "CONFIG_UART0";

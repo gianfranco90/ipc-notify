@@ -33,7 +33,7 @@ gpio1.MCU_GPIO.gpioPin.$assign = "MCU_SPI1_CLK";
 ipc.r5fss0_0 = "notify";
 ipc.r5fss0_1 = "notify";
 ipc.r5fss1_0 = "notify";
-ipc.m4fss0_0 = "NONE";
+ipc.m4fss0_0 = "notify";
 
 mpu_armv71.$name             = "CONFIG_MPU_REGION0";
 mpu_armv71.size              = 31;
@@ -69,4 +69,3 @@ mpu_armv77.baseAddr     = 0x701D0000;
 mpu_armv77.size         = 16;
 mpu_armv77.attributes   = "NonCached";
 mpu_armv77.allowExecute = false;
-

@@ -49,13 +49,13 @@ MULTI_CORE_APP_PARAMS = \
 	../ipc_notify_am64x-evm_r5fss0-1_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss0-1_baremetal_ti-arm-clang.rprc@$(BOOTIMAGE_CORE_ID_r5fss0-1) \
     ../ipc_notify_am64x-evm_r5fss1-0_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss1-0_baremetal_ti-arm-clang.rprc@$(BOOTIMAGE_CORE_ID_r5fss1-0) \
     ../ipc_notify_am64x-evm_r5fss1-1_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss1-1_baremetal_ti-arm-clang.rprc@$(BOOTIMAGE_CORE_ID_r5fss1-1) \
-	
+    ../ipc_notify_am64x-evm_m4fss0-0_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_m4fss0-0_baremetal_ti-arm-clang.rprc@$(BOOTIMAGE_CORE_ID_m4fss0-0) \	
 MULTI_CORE_APP_PARAMS_XIP = \
     ../ipc_notify_am64x-evm_r5fss0-0_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss0-0_baremetal_ti-arm-clang.rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss0-0) \
     ../ipc_notify_am64x-evm_r5fss0-1_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss0-1_baremetal_ti-arm-clang.rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss0-1) \
     ../ipc_notify_am64x-evm_r5fss1-0_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss1-0_baremetal_ti-arm-clang.rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss1-0) \
     ../ipc_notify_am64x-evm_r5fss1-1_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_r5fss1-1_baremetal_ti-arm-clang.rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss1-1) \
-
+    ../ipc_notify_am64x-evm_m4fss0-0_baremetal_ti-arm-clang/$(PROFILE)/ipc_notify_am64x-evm_m4fss0-0_baremetal_ti-arm-clang.rprc_xip@$(BOOTIMAGE_CORE_ID_m4fss0-0) \
 all:
 ifeq ($(CCS_IDE_MODE),cloud)
 #	No post build steps

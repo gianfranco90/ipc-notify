@@ -27,8 +27,10 @@ CORE_0=--script ../ipc-notify-r5fss0_0-baremetal/example.syscfg --context r5fss0
 CORE_1=--script ../ipc-notify-r5fss0_1-baremetal/example.syscfg --context r5fss0-1 --output ../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/generated
 CORE_2=--script ../ipc-notify-r5fss1_0-baremetal/example.syscfg --context r5fss1-0 --output ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/generated
 CORE_3=--script ../ipc-notify-r5fss1_1-baremetal/example.syscfg --context r5fss1-1 --output ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/generated
+CORE_4=--script ../ipc-notify-m4fss0_0-baremetal/example.syscfg --context m4fss0-0 --output ../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/generated
 
 CORES = \
+	$(CORE_4) \
     $(CORE_3) \
     $(CORE_2) \
     $(CORE_1) \
@@ -39,6 +41,7 @@ all: syscfg
 	$(MAKE) -C ../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ all
 	$(MAKE) -C ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ all
 	$(MAKE) -C ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ all
+	$(MAKE) -C ../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ all
 
 	$(MAKE) $(MULTI_CORE_BOOTIMAGE_NAME)
 ifeq ($(DEVICE_TYPE), HS)
@@ -50,6 +53,7 @@ clean:
 	$(MAKE) -C ../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ clean
 	$(MAKE) -C ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ clean
 	$(MAKE) -C ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ clean
+	$(MAKE) -C ../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ clean
 	$(RM) $(MULTI_CORE_BOOTIMAGE_NAME)
 	$(RM) $(MULTI_CORE_BOOTIMAGE_NAME_SIGNED)
 	$(RM) $(MULTI_CORE_BOOTIMAGE_NAME_HS)
@@ -61,6 +65,8 @@ scrub:
 	$(MAKE) -C ../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ scrub
 	$(MAKE) -C ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ scrub
 	$(MAKE) -C ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ scrub
+	$(MAKE) -C ../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ scrub
+	
 ifeq ($(OS),Windows_NT)
 	$(RM) \*.appimage
 	$(RM) \*.appimage.signed
@@ -106,18 +112,21 @@ MULTI_CORE_APP_PARAMS = \
 	../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc@$(BOOTIMAGE_CORE_ID_r5fss0-1) \
     ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc@$(BOOTIMAGE_CORE_ID_r5fss1-0) \
 	../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc@$(BOOTIMAGE_CORE_ID_r5fss1-1) \
+	../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc@$(BOOTIMAGE_CORE_ID_m4fss0-0) \
 
 MULTI_CORE_APP_PARAMS_XIP = \
     ../ipc-notify-r5fss0_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss0-0) \
 	../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss0-1) \
     ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss1-0) \
     ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc_xip@$(BOOTIMAGE_CORE_ID_r5fss1-1) \
+    ../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc_xip@$(BOOTIMAGE_CORE_ID_m4fss0-0) \
 	
 MULTI_CORE_BOOTIMAGE_DEPENDENCY = \
     ../ipc-notify-r5fss0_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc \
 	../ipc-notify-r5fss0_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc \
     ../ipc-notify-r5fss1_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc \
     ../ipc-notify-r5fss1_1-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc \
+	../ipc-notify-m4fss0_0-baremetal/ti-arm-clang/ipc_notify_benchmark.$(PROFILE).rprc \
 	
 $(MULTI_CORE_BOOTIMAGE_DEPENDENCY):
 

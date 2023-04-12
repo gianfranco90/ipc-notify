@@ -33,7 +33,7 @@ gpio1.MCU_GPIO.gpioPin.$assign = "MCU_SPI1_D0";
 ipc.r5fss0_0 = "notify";
 ipc.r5fss1_0 = "notify";
 ipc.r5fss1_1 = "notify";
-ipc.m4fss0_0 = "NONE";
+ipc.m4fss0_0 = "notify";
 
 mpu_armv71.$name             = "CONFIG_MPU_REGION0";
 mpu_armv71.size              = 31;
